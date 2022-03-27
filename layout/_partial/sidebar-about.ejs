@@ -12,7 +12,7 @@
                                 <% } else if (i.toLowerCase().startsWith('email')) { %>
                                     <a href="mailto:<%- theme.profile.links[i] %>"><%- theme.profile.links[i] %></a>
                                 <%  } else { %>
-                                    <a><%- theme.profile.links[i] %></a>
+                                    <a><%= i%>:<%- theme.profile.links[i] %></a>
                                 <% } %>
                             </li>
                         <% } %>
@@ -20,6 +20,7 @@
                 </div>
             </div>
         <% } %>
+        <hr/>
         <% if(theme.profile.skills) { %>
             <div class="widget skills-widget">
                 <h3 class="widget-title"><%= __('profile.skill') %></h3>
@@ -35,6 +36,7 @@
                 </div>
             </div>
         <% } %>
+        <hr/>
         <% if(theme.profile.labels) { %>
             <div class="widget labels-widget">
                 <h3 class="widget-title"><%= __('profile.label') %></h3>
@@ -45,6 +47,7 @@
                 </div>
             </div>
         <% } %>
+        <hr/>
         <% if(theme.profile.works) { %>
             <div class="widget works-widget">
                 <h3 class="widget-title"><%= __('profile.work') %></h3>
@@ -62,6 +65,7 @@
                 </div>
             </div>
         <% } %>
+        <hr/>
         <% if(theme.profile.projects) { %>
             <div class="widget projects-widget">
                 <h3 class="widget-title"><%= __('profile.project') %></h3>
